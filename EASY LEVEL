@@ -1,0 +1,15 @@
+#include <iostream>
+#include <stack>
+ 
+int main()
+{
+    std::stack<double> st({1, 2.5, 3, 2.1, 0});
+    double max = st.top();
+    while (!st.empty())
+    {
+        if (st.top() > max)
+            max = st.top();
+        std::cout << st.top() << " ";
+        st.pop();
+    }
+    std::cout << "\nMax: " << max << std::endl
